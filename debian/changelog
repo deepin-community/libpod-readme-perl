@@ -1,5 +1,119 @@
-template-repository (1.0-1) unstable; urgency=medium
+libpod-readme-perl (1.2.3-1) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Laurent Baillet ]
+  * fix lintian wrong-path-for-interpreter error
+
+  [ gregor herrmann ]
+  * Import upstream version 1.2.3.
+  * Update debian/upstream/metadata.
+  * Update years of upstream copyright.
+  * Remove third party file information.
+  * Drop fix-spelling-erros-in-manpages.patch, merged upstream.
+  * Declare compliance with Debian Policy 4.2.1.
+  * Bump debhelper compatibility level to 10.
+  * Add a lintian override for package-contains-documentation-outside-usr-
+    share-doc false positive.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 26 Nov 2018 19:53:51 +0100
+
+libpod-readme-perl (1.1.2-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
+  * Remove Antonio Radici from Uploaders. Thanks for your work!
+  * Fix autopkgtests. The smoke test also needs the Changes file.
+  * Declare compliance with Debian Policy 4.0.0.
+  * Drop unneeded alternative (build) dependencies.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 01 Aug 2017 17:10:19 -0400
+
+libpod-readme-perl (1.1.2-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ Lucas Kanashiro ]
+  * Add debian/upstream/metadata
+  * Import upstream version 1.1.2
+  * Update dependencies
+  * Add autopkgtest-pkg-perl
+  * Declare compliance with Debian policy 3.9.6
+  * Set debhelper >= 9
+  * Update date of upstream copyright and file structure
+  * Add patch fixing spelling error in manpages
+  * Remove comments from debian/watch
+  * Update long description
+  * Update upstream metadata
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Sun, 26 Jul 2015 17:45:04 -0300
+
+libpod-readme-perl (0.11-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules: Drop --buildsystem=perl_build: Build.PL is no longer there.
+    Also remove build-dep on libmodule-build-perl and lower required version
+    of debhelper.
+  * debian/copyright: Refer to /usr/share/common-licenses/GPL-1; refer to
+    "Debain systems" instead of "Debian GNU/Linux systems".
+  * Bump Standards-Version to 3.9.1.
+  * Update my email address.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Thu, 16 Dec 2010 12:56:56 +0100
+
+libpod-readme-perl (0.10-1) unstable; urgency=low
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Changed: Replace versioned (build-)dependency on
+    perl (>= 5.6.0-{12,16}) with an unversioned dependency on perl (as
+    permitted by Debian Policy 3.8.3).
+
+  [ gregor herrmann ]
+  * Improve short description, thanks to Jari Aalto for the bug report
+    (closes: #550287).
+
+  [ Ansgar Burchardt ]
+  * New upstream release.
+  * Add myself to Uploaders.
+  * Use tiny debian/rules.
+  * Use Build.PL instead of Makefile.PL, add build-dep on
+    perl (>= 5.10) | libmodule-build-perl.
+  * No longer run author tests, remove build-dep on libtest-pod-perl and
+    libtest-pod-coverage-perl.
+  * Bump Standards-Version to 3.8.4.
+  * debian/copyright: Formatting changes for current DEP-5 proposal.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Thu, 20 May 2010 18:06:36 +0900
+
+libpod-readme-perl (0.09-1) unstable; urgency=low
+
+  * Initial Release. (Closes: #518682)
+
+ -- Antonio Radici <antonio@dyne.org>  Sat, 7 Mar 2009 22:03:54 +0000
