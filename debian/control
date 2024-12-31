@@ -1,15 +1,53 @@
-Source: template-repository
-Section: unknown
+Source: libpod-readme-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Ansgar Burchardt <ansgar@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: libclass-method-modifiers-perl (>= 2.00),
+                     libcpan-changes-perl (>= 0.30),
+                     libfile-slurp-perl,
+                     libgetopt-long-descriptive-perl,
+                     libio-string-perl,
+                     libmoo-perl (>= 1.004005),
+                     libmoox-handlesvia-perl,
+                     libnamespace-autoclean-perl,
+                     libpath-tiny-perl,
+                     librole-tiny-perl,
+                     libtest-deep-perl,
+                     libtest-exception-perl,
+                     libtry-tiny-perl,
+                     libtype-tiny-perl,
+                     perl,
+                     perl (>= 5.19.5) | libscalar-list-utils-perl (>= 1:1.33)
+Standards-Version: 4.2.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libpod-readme-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libpod-readme-perl.git
+Homepage: https://metacpan.org/release/Pod-Readme
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libpod-readme-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libclass-method-modifiers-perl (>= 2.00),
+         libcpan-changes-perl (>= 0.30),
+         libfile-slurp-perl,
+         libgetopt-long-descriptive-perl,
+         libmoo-perl (>= 1.004005),
+         libmoox-handlesvia-perl,
+         libnamespace-autoclean-perl,
+         libpath-tiny-perl,
+         librole-tiny-perl,
+         libtry-tiny-perl,
+         libtype-tiny-perl,
+         perl (>= 5.19.5) | libscalar-list-utils-perl (>= 1:1.33)
+Recommends: libpod-markdown-perl,
+            libtype-tiny-xs-perl
+Description: Perl module to convert POD to README file
+ Pod::Readme is no longer a subclass of a POD parsing module. Instead, it is a
+ simple POD filter.
+ .
+ This module allows authors to mark portions of the POD to be included only in,
+ or to be excluded from the README file.  It also allows you to include
+ portions of another file (such as a separate ChangeLog).
